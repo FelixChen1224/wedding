@@ -21,6 +21,19 @@
 1. `index.html` 裡 iframe 的 `src`
 2. `script.js` 裡的 `rsvpFormUrl`
 
+## 完全客製化表單樣式
+
+Google Forms 的 iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改。若要完全控制表單裡的字體、顏色、間距與手機寬度，可以改用 `wedding-rsvp-webapp.gs`：
+
+1. 到 Google Apps Script 建立專案
+2. 貼上 `wedding-rsvp-webapp.gs`
+3. 部署為 Web App
+4. 權限選擇任何知道連結的人可使用
+5. 取得 Web App URL
+6. 將 `index.html` 的 Google Forms iframe `src` 換成 Web App URL
+
+這個版本會用 Apps Script 輸出自訂 HTML 表單，送出後自動寫入 Google 試算表。
+
 ## 部署到 GitHub Pages
 
 1. 在 GitHub 建立一個 repository
