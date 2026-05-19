@@ -1,6 +1,6 @@
 function createWeddingRsvpForm() {
   const config = {
-    formTitle: '周陳府喜宴出席回覆表',
+    formTitle: '喜宴出席回覆',
     responseSheetTitle: '周陳府喜宴出席名單',
     hostLine: '男方主婚人：林莉莉\n女方主婚人：陳國安、陳愛仁',
     groomName: '周弘明',

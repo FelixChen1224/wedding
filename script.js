@@ -109,6 +109,34 @@ function setupCalendar() {
   button.addEventListener('click', downloadCalendarFile);
 }
 
+function setupMobileFormFrame() {
+  const shell = document.querySelector('.form-shell');
+  if (!shell) return;
+
+  const virtualWidth = 480;
+  const virtualHeight = 1800;
+
+  const resizeFrame = () => {
+    const isMobile = window.matchMedia('(max-width: 520px)').matches;
+    if (!isMobile) {
+      shell.style.removeProperty('--form-frame-scale');
+      shell.style.removeProperty('--form-frame-width');
+      shell.style.removeProperty('--form-frame-height');
+      shell.style.removeProperty('--form-visual-height');
+      return;
+    }
+
+    const scale = Math.min(1, shell.clientWidth / virtualWidth);
+    shell.style.setProperty('--form-frame-scale', scale.toFixed(4));
+    shell.style.setProperty('--form-frame-width', `${virtualWidth}px`);
+    shell.style.setProperty('--form-frame-height', `${virtualHeight}px`);
+    shell.style.setProperty('--form-visual-height', `${Math.ceil(virtualHeight * scale)}px`);
+  };
+
+  resizeFrame();
+  window.addEventListener('resize', resizeFrame);
+}
+
 function setupHashScrollCorrection() {
   if (!window.location.hash) return;
 
@@ -123,5 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCountdown();
   setupAddressCopy();
   setupCalendar();
+  setupMobileFormFrame();
   setupHashScrollCorrection();
 });

@@ -5,3 +5,4 @@ server.out.log
 server.err.log
 .preview-http.*
 .chrome-*/
+.edge-*/
