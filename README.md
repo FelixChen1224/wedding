@@ -1,57 +1,53 @@
 # 周陳府喜宴 GitHub Pages 網站
 
-這是一個可直接部署到 GitHub Pages 的靜態網站，不需要安裝套件或啟動伺服器。
+這是一個可直接部署到 GitHub Pages 的靜態婚宴網站。
 
-## Google 表單連結
+## Google 表單設定
 
-目前網站已放入 Google 表單：
+網站目前使用 Google Forms iframe 內嵌表單：
 
 - 內嵌表單：`index.html` 的 `#form` 區塊
 - 另開表單按鈕：`script.js` 的 `rsvpFormUrl`
 
-網站已將表單外框套用酒紅、墨綠、金色系。Google 表單 iframe 內部不能由網站 CSS 直接改樣式；若要讓 Google 表單本體也一致，請在 Google Forms 右上角「自訂主題」設定：
+Google Forms iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改；表單本體的顏色、字體與封面需要在 Google Forms 後台手動調整。
 
-- 主題色：酒紅 `#70283A`
-- 背景色：米白或淺暖色
-- 字體：建議選較正式、易讀的字體
-- 表單說明：可使用 `wedding-rsvp-form.gs` 內的新版新人故事文案
+建議設定：
 
-如果之後要更換表單，請同時修改：
+1. 打開 Google 表單編輯頁。
+2. 點右上角「自訂主題」圖示。
+3. 主題色選自訂色：`#70283A`。
+4. 背景色選米白、淺暖色，接近網站底色。
+5. 字體選正式、易讀的樣式。
+6. 表單標題維持「周陳府喜宴出席回覆表」。
+7. 表單說明可放：
+
+```text
+從一次配對開始，將守護與照顧走成一生相伴。
+敬請協助回覆是否出席，以便安排席次。
+
+時間：2026年6月27日（星期六）中午12:00
+地點：一葉日本料理
+地址：嘉義市西區西平里博愛路二段700號
+```
+
+若之後要更換表單，請同時修改：
 
 1. `index.html` 裡 iframe 的 `src`
 2. `script.js` 裡的 `rsvpFormUrl`
 
-## 完全客製化表單樣式
-
-Google Forms 的 iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改。若要完全控制表單裡的字體、顏色、間距與手機寬度，可以改用 `wedding-rsvp-webapp.gs`：
-
-1. 到 Google Apps Script 建立專案
-2. 貼上 `wedding-rsvp-webapp.gs`
-3. 部署為 Web App
-4. 權限選擇任何知道連結的人可使用
-5. 取得 Web App URL
-6. 將 `index.html` 的 Google Forms iframe `src` 換成 Web App URL
-
-這個版本會用 Apps Script 輸出自訂 HTML 表單，送出後自動寫入 Google 試算表。
-
 ## 部署到 GitHub Pages
 
-1. 在 GitHub 建立一個 repository
-2. 上傳這些檔案：
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-   - `assets/hero.svg`
-3. 到 repository 的 `Settings`
-4. 點 `Pages`
-5. `Build and deployment` 選 `Deploy from a branch`
-6. Branch 選 `main`，資料夾選 `/root`
-7. 儲存後等待 GitHub 產生網址
+1. 在 GitHub repository 進入 `Settings`
+2. 點 `Pages`
+3. `Build and deployment` 選 `Deploy from a branch`
+4. Branch 選 `main`
+5. Folder 選 `/root`
+6. 儲存後等待 GitHub 產生網址
 
 ## 可客製的位置
 
 - 網站標題：`index.html`
-- 新人與主婚人資訊：`index.html`
+- 主婚人與新人故事：`index.html`
 - 喜宴日期、時間、地點：`index.html` 與 `script.js`
-- 封面圖片：替換 `assets/hero.svg`
+- 封面圖片：`assets/hero.svg`
 - 主色調：`styles.css` 最上方的 `:root`
