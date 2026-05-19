@@ -1,0 +1,5 @@
+preview-*.png
+example.png
+server.out.log
+server.err.log
+.chrome-*/

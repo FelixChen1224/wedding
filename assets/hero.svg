@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">婚宴邀請封面</title>
+  <desc id="desc">酒紅、墨綠與金色調的婚宴桌席、花卉與日式格窗視覺。</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8efe2"/>
+      <stop offset="0.5" stop-color="#e8cfa8"/>
+      <stop offset="1" stop-color="#2e514d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="68%" cy="35%" r="46%">
+      <stop offset="0" stop-color="#fff6d9" stop-opacity="0.86"/>
+      <stop offset="0.42" stop-color="#e0aa4f" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#6f2638" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="table" x1="0" x2="1">
+      <stop offset="0" stop-color="#5a1f2f"/>
+      <stop offset="0.62" stop-color="#863950"/>
+      <stop offset="1" stop-color="#1f5d55"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1800" height="1100" fill="url(#wall)"/>
+  <rect width="1800" height="1100" fill="url(#glow)"/>
+
+  <g opacity="0.28">
+    <path d="M1160 0v720M1320 0v780M1480 0v760M1640 0v700" stroke="#fffaf0" stroke-width="8"/>
+    <path d="M1040 120h760M1080 300h720M1120 480h680M1140 660h660" stroke="#fffaf0" stroke-width="8"/>
+  </g>
+
+  <g transform="translate(920 520)" opacity="0.9">
+    <circle cx="0" cy="0" r="248" fill="#fffaf2" opacity="0.2" filter="url(#soft)"/>
+    <ellipse cx="0" cy="50" rx="310" ry="88" fill="#1b3431" opacity="0.25"/>
+    <ellipse cx="0" cy="0" rx="270" ry="72" fill="#fff8e8"/>
+    <ellipse cx="0" cy="0" rx="226" ry="54" fill="#e3bd75"/>
+    <ellipse cx="0" cy="-4" rx="190" ry="42" fill="#fff8e8"/>
+    <circle cx="-82" cy="-12" r="22" fill="#b83854"/>
+    <circle cx="-44" cy="-26" r="18" fill="#e5b24d"/>
+    <circle cx="-6" cy="-16" r="24" fill="#7a2f43"/>
+    <circle cx="42" cy="-22" r="20" fill="#c65062"/>
+    <circle cx="86" cy="-10" r="18" fill="#eac66f"/>
+    <path d="M-126 18c78 30 166 31 252 0" fill="none" stroke="#2d6960" stroke-width="16" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.92">
+    <path d="M0 780c260-104 482-112 704-38 226 76 445 88 668 6 171-63 309-69 428-20v372H0Z" fill="url(#table)"/>
+    <path d="M0 824c256-78 489-77 701-12 247 76 471 75 679 4 154-53 293-49 420-8v292H0Z" fill="#fff3e2" opacity="0.12"/>
+  </g>
+
+  <g transform="translate(1220 680)">
+    <ellipse cx="0" cy="240" rx="375" ry="66" fill="#261a18" opacity="0.2"/>
+    <path d="M-270 232c68-116 174-176 318-178 118-2 218 58 300 178Z" fill="#fff7e8"/>
+    <path d="M-214 224c61-78 148-117 262-118 90 0 167 39 233 118Z" fill="#ead4b0"/>
+    <path d="M-88 32c-24-84 34-152 118-160 89-8 157 48 166 124-78-18-172-5-284 36Z" fill="#173f3b"/>
+    <path d="M-128 58c54-70 124-106 211-108 69-2 126 22 171 70-98-6-226 7-382 38Z" fill="#2f7469"/>
+    <circle cx="-138" cy="84" r="34" fill="#8b2741"/>
+    <circle cx="-84" cy="42" r="28" fill="#d9a345"/>
+    <circle cx="-24" cy="58" r="36" fill="#b83f58"/>
+    <circle cx="38" cy="32" r="30" fill="#f1c765"/>
+    <circle cx="92" cy="72" r="38" fill="#7d263d"/>
+    <circle cx="156" cy="52" r="28" fill="#e7b356"/>
+    <path d="M-220 130c126 52 281 56 466 10" fill="none" stroke="#266055" stroke-width="20" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(410 760)" opacity="0.95">
+    <ellipse cx="0" cy="164" rx="210" ry="42" fill="#2b1c19" opacity="0.16"/>
+    <rect x="-34" y="-50" width="68" height="188" rx="30" fill="#fff7e6"/>
+    <rect x="-18" y="-30" width="36" height="150" rx="18" fill="#e5c583"/>
+    <path d="M-126 60c70-48 164-48 236 0v92H-126Z" fill="#fff7e6"/>
+    <path d="M-96 74c54-28 128-28 182 0v58H-96Z" fill="#d8a24a"/>
+    <path d="M-132 154h250" stroke="#fff7e6" stroke-width="28" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.32">
+    <circle cx="205" cy="210" r="86" fill="#fff8de"/>
+    <circle cx="285" cy="266" r="36" fill="#c53f5b"/>
+    <circle cx="1450" cy="216" r="54" fill="#fff8de"/>
+    <circle cx="1514" cy="260" r="34" fill="#b93650"/>
+    <path d="M96 354c97-96 219-127 366-94" fill="none" stroke="#fff8de" stroke-width="10" stroke-linecap="round"/>
+    <path d="M1324 370c104-82 218-106 342-72" fill="none" stroke="#fff8de" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>
