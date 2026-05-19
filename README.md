@@ -9,6 +9,13 @@
 - 內嵌表單：`index.html` 的 `#form` 區塊
 - 另開表單按鈕：`script.js` 的 `rsvpFormUrl`
 
+網站已將表單外框套用酒紅、墨綠、金色系。Google 表單 iframe 內部不能由網站 CSS 直接改樣式；若要讓 Google 表單本體也一致，請在 Google Forms 右上角「自訂主題」設定：
+
+- 主題色：酒紅 `#70283A`
+- 背景色：米白或淺暖色
+- 字體：建議選較正式、易讀的字體
+- 表單說明：可使用 `wedding-rsvp-form.gs` 內的新版新人故事文案
+
 如果之後要更換表單，請同時修改：
 
 1. `index.html` 裡 iframe 的 `src`
