@@ -4,7 +4,8 @@ function createWeddingRsvpForm() {
     responseSheetTitle: '周陳府喜宴出席名單',
     hostLine: '男方主婚人：林莉莉\n女方主婚人：陳國安、陳愛仁',
     groomName: '周弘明',
-    storyLine: '兩人透過交友軟體相識；男方從事保險工作，女方投入長照領域，將守護與照顧走成一生相伴。',
+    brideName: '陳淑玲',
+    storyLine: '兩人在生活節奏裡相識；男方從事保險工作，女方投入長照領域，將守護與照顧走成一生相伴。',
     eventDate: '2026年6月27日（星期六）',
     eventTime: '中午12:00',
     venueName: '一葉日本料理',
@@ -17,7 +18,7 @@ function createWeddingRsvpForm() {
   form.setDescription(
     '誠摯邀請您參加周陳府喜宴，敬請協助填寫出席回覆，以便安排席次。\n\n' +
       config.hostLine + '\n' +
-      '新人：' + config.groomName + '\n' +
+      '新人：' + config.groomName + ' 與 ' + config.brideName + '\n' +
       '新人故事：' + config.storyLine + '\n' +
       '時間：' + config.eventDate + ' ' + config.eventTime + '\n' +
       '地點：' + config.venueName + '\n' +
@@ -33,7 +34,7 @@ function createWeddingRsvpForm() {
   form.setDestination(FormApp.DestinationType.SPREADSHEET, responseSheet.getId());
 
   form.addSectionHeaderItem()
-    .setTitle('從一次配對，到一生相守')
+    .setTitle('從一場相識，到一生相守')
     .setHelpText(config.storyLine);
 
   form.addTextItem()

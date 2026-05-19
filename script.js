@@ -26,7 +26,7 @@ function toIcsDate(date) {
 function downloadCalendarFile() {
   const start = new Date(SITE_CONFIG.eventStart);
   const end = new Date(SITE_CONFIG.eventEnd);
-  const description = '周陳府喜宴，敬邀蒞臨。';
+  const description = '周弘明與陳淑玲喜宴，敬邀蒞臨。';
   const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
@@ -71,7 +71,17 @@ function setupCountdown() {
   if (!countdown) return;
 
   const target = new Date(SITE_CONFIG.eventStart);
-  countdown.textContent = formatCountdown(target);
+  const renderCountdown = () => {
+    if (Number.isNaN(target.getTime())) {
+      countdown.textContent = '2026.06.27';
+      return;
+    }
+
+    countdown.textContent = formatCountdown(target);
+  };
+
+  renderCountdown();
+  window.setInterval(renderCountdown, 60 * 1000);
 }
 
 function setupAddressCopy() {
