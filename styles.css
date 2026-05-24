@@ -576,6 +576,26 @@ h2 {
   margin-top: 20px;
 }
 
+.parking-map {
+  margin: 18px 0 0;
+}
+
+.parking-map img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(92, 64, 44, 0.06);
+}
+
+.parking-map figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
 address {
   margin-top: 12px;
   color: var(--muted);

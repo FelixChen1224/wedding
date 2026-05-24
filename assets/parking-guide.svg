@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">一葉日本料理與第二停車場導引示意圖</title>
+  <desc id="desc">示意圖標示一葉日本料理、博愛路二段、友忠路與第二停車場友忠路52號的位置。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#5c402c" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="#70283a"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="#fffaf4"/>
+  <rect x="48" y="48" width="1104" height="664" rx="28" fill="#ffffff" stroke="#e6d8c8" stroke-width="3" filter="url(#shadow)"/>
+
+  <path d="M120 210 H1080" stroke="#d8c3a7" stroke-width="72" stroke-linecap="round"/>
+  <path d="M120 210 H1080" stroke="#fff6e8" stroke-width="48" stroke-linecap="round"/>
+  <path d="M120 210 H1080" stroke="#caa76e" stroke-width="4" stroke-dasharray="18 18" opacity="0.7"/>
+
+  <path d="M340 100 C330 230 328 352 360 660" stroke="#d8c3a7" stroke-width="70" stroke-linecap="round" fill="none"/>
+  <path d="M340 100 C330 230 328 352 360 660" stroke="#fff6e8" stroke-width="46" stroke-linecap="round" fill="none"/>
+  <path d="M340 100 C330 230 328 352 360 660" stroke="#caa76e" stroke-width="4" stroke-dasharray="18 18" opacity="0.7" fill="none"/>
+
+  <path d="M170 475 C320 420 510 405 730 440 C875 464 980 458 1060 424" stroke="#eadfce" stroke-width="48" stroke-linecap="round" fill="none"/>
+  <path d="M170 475 C320 420 510 405 730 440 C875 464 980 458 1060 424" stroke="#fffaf4" stroke-width="28" stroke-linecap="round" fill="none"/>
+
+  <text x="660" y="188" fill="#6c625e" font-size="34" font-weight="700" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">博愛路二段</text>
+  <text x="282" y="396" fill="#6c625e" font-size="32" font-weight="700" text-anchor="middle" transform="rotate(84 282 396)" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">友忠路</text>
+
+  <g transform="translate(710 92)">
+    <rect width="310" height="150" rx="20" fill="#70283a" filter="url(#shadow)"/>
+    <text x="155" y="58" fill="#fffdf9" font-size="31" font-weight="800" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">一葉日本料理</text>
+    <text x="155" y="102" fill="#f0c979" font-size="24" font-weight="700" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">博愛路二段700號</text>
+  </g>
+
+  <g transform="translate(150 500)">
+    <rect width="390" height="130" rx="20" fill="#174d49" filter="url(#shadow)"/>
+    <text x="195" y="50" fill="#fffdf9" font-size="30" font-weight="800" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">第二停車場</text>
+    <text x="195" y="91" fill="#f0c979" font-size="24" font-weight="700" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">友忠路52號</text>
+  </g>
+
+  <path d="M752 250 C666 324 548 420 430 500" stroke="#70283a" stroke-width="16" stroke-linecap="round" fill="none" marker-end="url(#arrow)"/>
+  <text x="625" y="390" fill="#70283a" font-size="26" font-weight="800" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">停車動線</text>
+
+  <g transform="translate(786 510)">
+    <rect width="300" height="90" rx="18" fill="#fffaf4" stroke="#e6d8c8" stroke-width="3"/>
+    <circle cx="48" cy="45" r="14" fill="#70283a"/>
+    <text x="78" y="38" fill="#352c2a" font-size="21" font-weight="700" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">建議先導航停車場</text>
+    <text x="78" y="66" fill="#6c625e" font-size="18" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">再依現場指引步行入席</text>
+  </g>
+
+  <text x="80" y="680" fill="#8b7d74" font-size="18" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">本圖為附近道路導引示意，實際路況與出入口請依現場及導航為準。</text>
+</svg>
