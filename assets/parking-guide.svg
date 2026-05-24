@@ -5,8 +5,8 @@
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#5c402c" flood-opacity="0.16"/>
     </filter>
-    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto" markerUnits="strokeWidth">
-      <path d="M 0 0 L 14 7 L 0 14 z" fill="#70283a"/>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 0 L 9 4.5 L 0 9 z" fill="#70283a"/>
     </marker>
   </defs>
 
@@ -27,26 +27,30 @@
   <text x="660" y="188" fill="#6c625e" font-size="34" font-weight="700" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">博愛路二段</text>
   <text x="282" y="396" fill="#6c625e" font-size="32" font-weight="700" text-anchor="middle" transform="rotate(84 282 396)" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">友忠路</text>
 
-  <g transform="translate(710 92)">
-    <rect width="310" height="150" rx="20" fill="#70283a" filter="url(#shadow)"/>
-    <text x="155" y="58" fill="#fffdf9" font-size="31" font-weight="800" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">一葉日本料理</text>
-    <text x="155" y="102" fill="#f0c979" font-size="24" font-weight="700" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">博愛路二段700號</text>
+  <circle cx="906" cy="210" r="10" fill="#fffaf4" stroke="#70283a" stroke-width="5"/>
+  <path d="M906 198 V210" stroke="#70283a" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(760 86)">
+    <rect width="272" height="112" rx="16" fill="#70283a" filter="url(#shadow)"/>
+    <text x="136" y="45" fill="#fffdf9" font-size="27" font-weight="800" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">一葉日本料理</text>
+    <text x="136" y="78" fill="#f0c979" font-size="20" font-weight="700" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">博愛路二段700號</text>
   </g>
 
-  <g transform="translate(150 500)">
-    <rect width="390" height="130" rx="20" fill="#174d49" filter="url(#shadow)"/>
-    <text x="195" y="50" fill="#fffdf9" font-size="30" font-weight="800" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">第二停車場</text>
-    <text x="195" y="91" fill="#f0c979" font-size="24" font-weight="700" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">友忠路52號</text>
+  <circle cx="348" cy="518" r="10" fill="#fffaf4" stroke="#174d49" stroke-width="5"/>
+  <path d="M320 544 L348 518" stroke="#174d49" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(132 544)">
+    <rect width="296" height="98" rx="16" fill="#174d49" filter="url(#shadow)"/>
+    <text x="148" y="39" fill="#fffdf9" font-size="25" font-weight="800" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">第二停車場</text>
+    <text x="148" y="70" fill="#f0c979" font-size="20" font-weight="700" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">友忠路52號</text>
   </g>
 
-  <path d="M752 250 C666 324 548 420 430 500" stroke="#70283a" stroke-width="16" stroke-linecap="round" fill="none" marker-end="url(#arrow)"/>
-  <text x="625" y="390" fill="#70283a" font-size="26" font-weight="800" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">停車動線</text>
+  <path d="M352 510 C348 454 346 398 352 342 C496 314 660 292 806 242 C842 230 874 218 902 211" stroke="#70283a" stroke-width="8" stroke-linecap="round" fill="none" marker-end="url(#arrow)"/>
+  <text x="560" y="334" fill="#70283a" font-size="21" font-weight="800" text-anchor="middle" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">停車後步行入席</text>
 
-  <g transform="translate(786 510)">
-    <rect width="300" height="90" rx="18" fill="#fffaf4" stroke="#e6d8c8" stroke-width="3"/>
-    <circle cx="48" cy="45" r="14" fill="#70283a"/>
-    <text x="78" y="38" fill="#352c2a" font-size="21" font-weight="700" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">建議先導航停車場</text>
-    <text x="78" y="66" fill="#6c625e" font-size="18" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">再依現場指引步行入席</text>
+  <g transform="translate(800 538)">
+    <rect width="268" height="78" rx="14" fill="#fffaf4" stroke="#e6d8c8" stroke-width="3"/>
+    <circle cx="38" cy="39" r="10" fill="#70283a"/>
+    <text x="62" y="34" fill="#352c2a" font-size="18" font-weight="700" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">建議先導航停車場</text>
+    <text x="62" y="58" fill="#6c625e" font-size="16" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">再依現場指引步行入席</text>
   </g>
 
   <text x="80" y="680" fill="#8b7d74" font-size="18" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">本圖為附近道路導引示意，實際路況與出入口請依現場及導航為準。</text>

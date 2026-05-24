@@ -16,9 +16,14 @@ function formatCountdown(target) {
 
   const dayMs = 24 * 60 * 60 * 1000;
   const hourMs = 60 * 60 * 1000;
+  const minuteMs = 60 * 1000;
+  const secondMs = 1000;
   const days = Math.floor(diff / dayMs);
   const hours = Math.floor((diff % dayMs) / hourMs);
-  return `${days}天 ${hours}小時`;
+  const minutes = Math.floor((diff % hourMs) / minuteMs);
+  const seconds = Math.floor((diff % minuteMs) / secondMs);
+  const time = [hours, minutes, seconds].map((value) => String(value).padStart(2, '0')).join(':');
+  return `${days}天 ${time}`;
 }
 
 function toIcsDate(date) {
@@ -87,7 +92,7 @@ function setupCountdown() {
   };
 
   renderCountdown();
-  window.setInterval(renderCountdown, 60 * 1000);
+  window.setInterval(renderCountdown, 1000);
 }
 
 function setupAddressCopy() {

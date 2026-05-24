@@ -291,6 +291,11 @@ h2 {
   line-height: 1.35;
 }
 
+.countdown-card strong {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 .detail-card p {
   margin: 10px 0 0;
   color: var(--muted);
