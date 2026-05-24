@@ -49,6 +49,20 @@ function createWeddingRsvpForm() {
     .setHelpText('方便主辦方確認席次或聯繫。')
     .setRequired(true);
 
+  const sideItem = form.addMultipleChoiceItem();
+  sideItem
+    .setTitle('您是哪一方親友？')
+    .setHelpText('方便分別統計男方、女方親友與安排桌次。')
+    .setChoices([
+      '男方親友（周弘明）',
+      '女方親友（陳淑玲）',
+      '雙方共同親友',
+      '其他／主婚人協助邀請'
+    ].map(function(choice) {
+      return sideItem.createChoice(choice);
+    }))
+    .setRequired(true);
+
   const attendanceItem = form.addMultipleChoiceItem();
   attendanceItem
     .setTitle('是否出席喜宴？')
