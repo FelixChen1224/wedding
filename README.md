@@ -7,7 +7,7 @@
 網站目前使用 Google Forms iframe 內嵌表單：
 
 - 內嵌表單：`index.html` 的 `#form` 區塊
-- 另開表單按鈕：`script.js` 的 `rsvpFormUrl`
+- 表單區塊放在頁面底部，讓賓客先看完流程、菜單與停車資訊
 
 Google Forms iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改；表單本體的顏色、字體與封面需要在 Google Forms 後台手動調整。
 
@@ -29,6 +29,7 @@ Google Forms iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改；�
 時間：2026年6月27日（星期六）中午12:00
 地點：一葉日本料理
 地址：嘉義市西區西平里博愛路二段700號
+停車：第二停車場位於嘉義市西區友忠路52號
 ```
 
 若之後要更換表單，請同時修改：
@@ -50,5 +51,6 @@ Google Forms iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改；�
 - 網站標題：`index.html`
 - 主婚人與新人故事：`index.html`
 - 喜宴日期、時間、地點：`index.html` 與 `script.js`
+- 停車資訊：`index.html` 與 `script.js`
 - 封面圖片：`assets/hero.svg`
 - 主色調：`styles.css` 最上方的 `:root`

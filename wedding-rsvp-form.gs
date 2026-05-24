@@ -9,7 +9,8 @@ function createWeddingRsvpForm() {
     eventDate: '2026年6月27日（星期六）',
     eventTime: '中午12:00',
     venueName: '一葉日本料理',
-    venueAddress: '嘉義市西區西平里博愛路二段700號'
+    venueAddress: '嘉義市西區西平里博愛路二段700號',
+    parkingAddress: '第二停車場：嘉義市西區友忠路52號'
   };
 
   const form = FormApp.create(config.formTitle);
@@ -22,7 +23,8 @@ function createWeddingRsvpForm() {
       '新人故事：' + config.storyLine + '\n' +
       '時間：' + config.eventDate + ' ' + config.eventTime + '\n' +
       '地點：' + config.venueName + '\n' +
-      '地址：' + config.venueAddress
+      '地址：' + config.venueAddress + '\n' +
+      '停車：' + config.parkingAddress
   );
 
   form.setConfirmationMessage(

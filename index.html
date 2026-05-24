@@ -9,8 +9,8 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="./assets/hero.svg">
     <title>周陳府喜宴 | 2026.06.27</title>
-    <link rel="stylesheet" href="./styles.css?v=20260519-mobile-form">
-    <script src="./script.js?v=20260519-mobile-form" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260524-layout">
+    <script src="./script.js?v=20260524-layout" defer></script>
   </head>
   <body>
     <header class="hero" id="top">
@@ -19,8 +19,10 @@
         <div class="nav-links">
           <a href="#details">喜宴資訊</a>
           <a href="#story">新人故事</a>
-          <a href="#rsvp">出席回覆</a>
+          <a href="#schedule">當日流程</a>
           <a href="#menu">宴席菜色</a>
+          <a href="#parking">交通停車</a>
+          <a href="#rsvp">出席回覆</a>
         </div>
       </nav>
 
@@ -105,40 +107,7 @@
         </div>
       </section>
 
-      <section class="section rsvp-band" id="rsvp" aria-labelledby="rsvp-title">
-        <div class="rsvp-copy">
-          <p class="eyebrow">RSVP</p>
-          <h2 id="rsvp-title">請協助回覆是否出席</h2>
-          <p>為方便安排桌次與餐飲需求，敬請填寫出席回覆。若當天不克前往，也歡迎留下給新人的祝福。</p>
-        </div>
-        <div class="rsvp-actions">
-          <a class="button primary" href="#form">填寫出席回覆</a>
-          <button class="button quiet" type="button" data-calendar-button>加入行事曆</button>
-        </div>
-      </section>
-
-      <section class="section form-section" id="form" aria-labelledby="form-title">
-        <div class="form-heading">
-          <div>
-            <p class="eyebrow">Google Form</p>
-            <h2 id="form-title">出席回覆表</h2>
-            <p>請留下您的出席回覆，讓我們為這場由相遇、守護與照顧延伸而來的喜宴，提前安排最合適的席次。</p>
-          </div>
-        </div>
-        <div class="form-shell">
-          <iframe
-            title="周陳府喜宴出席回覆表"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdLqFzW78R-9dRw6UyBX8Jk5SaAxfoMwoZPPd5JB3evD8O3zQ/viewform?embedded=true"
-            width="100%"
-            height="1294"
-            loading="lazy"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0">載入中...</iframe>
-        </div>
-      </section>
-
-      <section class="section split" aria-labelledby="schedule-title">
+      <section class="section split" id="schedule" aria-labelledby="schedule-title">
         <div class="section-heading">
           <p class="eyebrow">Schedule</p>
           <h2 id="schedule-title">當日流程</h2>
@@ -168,11 +137,11 @@
         <div class="menu-grid">
           <span>花好月圓</span>
           <span>漢方淮山燉雞</span>
-          <span>黃金烏魚子五福拼盤</span>
-          <span>烤豬肋排</span>
+          <span>黃金烏魚子、冰卷、油雞、烤豬肋排（五福拼盤）</span>
           <span>古早味懷舊魚翅羹</span>
           <span>陶板蒜香河粉大蝦</span>
-          <span>櫻花蝦米糕與花壽司</span>
+          <span>蠔皇雙鮮（杏鮑菇、烏蔘、虎掌）</span>
+          <span>鰻魚、櫻花蝦米糕、花壽司</span>
           <span>魚露龍虎斑</span>
           <span>紅蟳龍膽菌菇鍋</span>
           <span>四季佳果</span>
@@ -181,16 +150,54 @@
         </div>
       </section>
 
-      <section class="section location" aria-labelledby="location-title">
-        <div>
-          <p class="eyebrow">Location</p>
-          <h2 id="location-title">一葉日本料理</h2>
-          <address>嘉義市西區西平里博愛路二段700號</address>
+      <section class="section travel-section" id="parking" aria-labelledby="parking-title">
+        <div class="section-heading">
+          <p class="eyebrow">Location & Parking</p>
+          <h2 id="parking-title">交通停車</h2>
+          <p>喜宴地點為一葉日本料理，賓客可免費停車；第二停車場位於友忠路52號。</p>
         </div>
-        <div class="location-actions">
-          <a class="button secondary" data-map-link href="https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E8%91%89%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86%20%E5%98%89%E7%BE%A9%E5%B8%82%E8%A5%BF%E5%8D%80%E8%A5%BF%E5%B9%B3%E9%87%8C%E5%8D%9A%E6%84%9B%E8%B7%AF%E4%BA%8C%E6%AE%B5700%E8%99%9F" target="_blank" rel="noreferrer">開啟 Google 地圖</a>
-          <button class="button quiet" type="button" data-copy-address>複製地址</button>
-          <span class="copy-status" data-copy-status aria-live="polite"></span>
+        <div class="travel-grid">
+          <article class="travel-card">
+            <span class="detail-label">宴會地點</span>
+            <strong>一葉日本料理</strong>
+            <address>嘉義市西區西平里博愛路二段700號</address>
+            <div class="location-actions">
+              <a class="button secondary" data-map-link href="https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E8%91%89%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86%20%E5%98%89%E7%BE%A9%E5%B8%82%E8%A5%BF%E5%8D%80%E8%A5%BF%E5%B9%B3%E9%87%8C%E5%8D%9A%E6%84%9B%E8%B7%AF%E4%BA%8C%E6%AE%B5700%E8%99%9F" target="_blank" rel="noreferrer">開啟地圖</a>
+              <button class="button quiet" type="button" data-copy-address>複製地址</button>
+              <span class="copy-status" data-copy-status aria-live="polite"></span>
+            </div>
+          </article>
+          <article class="travel-card">
+            <span class="detail-label">免費停車</span>
+            <strong>第二停車場</strong>
+            <address>嘉義市西區友忠路52號</address>
+            <p>請依餐廳與現場人員指引停放。</p>
+            <div class="location-actions">
+              <a class="button secondary" data-parking-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%98%89%E7%BE%A9%E5%B8%82%E8%A5%BF%E5%8D%80%E5%8F%8B%E5%BF%A0%E8%B7%AF52%E8%99%9F" target="_blank" rel="noreferrer">導航停車場</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section service-section" aria-labelledby="service-title">
+        <div class="section-heading">
+          <p class="eyebrow">Service</p>
+          <h2 id="service-title">宴席服務</h2>
+          <p>餐廳提供現場佈置與酒水服務，實際內容依當日安排為準。</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <strong>酒水飲品</strong>
+            <p>每桌進口紅酒一瓶，飲料暢飲。</p>
+          </article>
+          <article class="service-card">
+            <strong>現場佈置</strong>
+            <p>POP架、相片架、紅毯花柱與各桌藝術桌花。</p>
+          </article>
+          <article class="service-card">
+            <strong>新人服務</strong>
+            <p>新娘桌菜邊服務，奉茶茶具與甜茶需提前告知。</p>
+          </article>
         </div>
       </section>
 
@@ -198,6 +205,39 @@
         <div class="note">
           <strong>溫馨提醒</strong>
           <p>如有素食、忌口、兒童座椅或其他座位安排需求，請在 Google 表單中備註，方便提前安排。</p>
+        </div>
+      </section>
+
+      <section class="section rsvp-band" id="rsvp" aria-labelledby="rsvp-title">
+        <div class="rsvp-copy">
+          <p class="eyebrow">RSVP</p>
+          <h2 id="rsvp-title">請協助回覆是否出席</h2>
+          <p>上方資訊確認後，請填寫出席回覆，方便安排桌次與餐飲需求。若當天不克前往，也歡迎留下給新人的祝福。</p>
+        </div>
+        <div class="rsvp-actions">
+          <a class="button primary" href="#form">填寫出席回覆</a>
+          <button class="button quiet" type="button" data-calendar-button>加入行事曆</button>
+        </div>
+      </section>
+
+      <section class="section form-section" id="form" aria-labelledby="form-title">
+        <div class="form-heading">
+          <div>
+            <p class="eyebrow">Google Form</p>
+            <h2 id="form-title">出席回覆表</h2>
+            <p>請留下您的出席回覆，讓我們為這場由相遇、守護與照顧延伸而來的喜宴，提前安排最合適的席次。</p>
+          </div>
+        </div>
+        <div class="form-shell">
+          <iframe
+            title="周陳府喜宴出席回覆表"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdLqFzW78R-9dRw6UyBX8Jk5SaAxfoMwoZPPd5JB3evD8O3zQ/viewform?embedded=true"
+            width="100%"
+            height="1294"
+            loading="lazy"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">載入中...</iframe>
         </div>
       </section>
     </main>
