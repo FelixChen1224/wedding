@@ -53,5 +53,6 @@ Google Forms iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改；�
 - 主婚人與新人故事：`index.html`
 - 喜宴日期、時間、地點：`index.html` 與 `script.js`
 - 停車資訊：`index.html` 與 `script.js`
+- 新人影片：`assets/wedding-moment.mov`
 - 封面圖片：`assets/hero.svg`
 - 主色調：`styles.css` 最上方的 `:root`
