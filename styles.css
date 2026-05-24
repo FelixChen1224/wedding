@@ -70,8 +70,8 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 14px;
-  font-size: 0.95rem;
+  gap: 12px;
+  font-size: 0.9rem;
 }
 
 .nav-links a {
@@ -366,6 +366,105 @@ h2 {
   color: var(--muted);
 }
 
+.faith-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.faith-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(135deg, rgba(112, 40, 58, 0.06), rgba(23, 77, 73, 0.08)),
+    var(--paper);
+}
+
+.faith-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 32px;
+  align-items: center;
+}
+
+.faith-symbol {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  justify-self: end;
+}
+
+.cross-mark {
+  position: absolute;
+  left: 82px;
+  top: 26px;
+  width: 36px;
+  height: 118px;
+  border-radius: 18px;
+  background: var(--wine);
+  box-shadow: 0 16px 34px rgba(112, 40, 58, 0.2);
+}
+
+.cross-mark::after {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 36px;
+  width: 112px;
+  height: 32px;
+  border-radius: 16px;
+  background: var(--wine);
+}
+
+.ring-mark {
+  position: absolute;
+  left: 34px;
+  bottom: 18px;
+  width: 128px;
+  height: 82px;
+  border: 12px solid var(--gold);
+  border-radius: 50%;
+  transform: rotate(-10deg);
+  opacity: 0.92;
+}
+
+.faith-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.faith-card {
+  min-height: 168px;
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(92, 64, 44, 0.06);
+}
+
+.faith-card span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.faith-card strong {
+  display: block;
+  color: var(--wine);
+  font-size: 1.36rem;
+  line-height: 1.35;
+}
+
+.faith-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
 .video-section {
   border-bottom: 1px solid var(--line);
 }
@@ -650,6 +749,8 @@ address {
   .detail-grid,
   .menu-grid,
   .menu-list,
+  .faith-layout,
+  .faith-grid,
   .story-layout,
   .split,
   .form-heading,
@@ -658,6 +759,10 @@ address {
   .travel-grid,
   .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .faith-symbol {
+    display: none;
   }
 
   .menu-item.drink-note {

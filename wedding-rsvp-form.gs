@@ -5,7 +5,7 @@ function createWeddingRsvpForm() {
     hostLine: '男方主婚人：林莉莉\n女方主婚人：陳國安、陳愛仁',
     groomName: '周弘明',
     brideName: '陳淑玲',
-    storyLine: '兩人在生活節奏裡相識；男方從事保險工作，女方投入長照領域，將守護與照顧走成一生相伴。',
+    storyLine: '兩人在生活節奏裡相識；男方從事保險工作，女方投入長照領域，在上帝祝福與親友見證中，將守護與照顧走成一生相伴。',
     eventDate: '2026年6月27日（星期六）',
     eventTime: '中午12:00',
     venueName: '一葉日本料理',
@@ -36,7 +36,7 @@ function createWeddingRsvpForm() {
   form.setDestination(FormApp.DestinationType.SPREADSHEET, responseSheet.getId());
 
   form.addSectionHeaderItem()
-    .setTitle('從一場相識，到一生相守')
+    .setTitle('從一場相識，到祝福中的盟約')
     .setHelpText(config.storyLine);
 
   form.addTextItem()

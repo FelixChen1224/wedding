@@ -28,7 +28,7 @@ function toIcsDate(date) {
 function downloadCalendarFile() {
   const start = new Date(SITE_CONFIG.eventStart);
   const end = new Date(SITE_CONFIG.eventEnd);
-  const description = '周弘明與陳淑玲喜宴，敬邀蒞臨。';
+  const description = '周弘明與陳淑玲喜宴，敬邀在上帝祝福與親友見證中一同蒞臨。';
   const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
