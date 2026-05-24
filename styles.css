@@ -322,6 +322,18 @@ h2 {
   color: rgba(255, 253, 249, 0.82);
 }
 
+.deadline-line {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 14px;
+  padding: 9px 14px;
+  border: 1px solid rgba(240, 201, 121, 0.55);
+  border-radius: 999px;
+  background: rgba(255, 253, 249, 0.12);
+  color: #fffdf9;
+  font-weight: 800;
+}
+
 .rsvp-band .button.quiet {
   background: #fffdf9;
 }
@@ -486,6 +498,17 @@ h2 {
   max-width: 680px;
   margin-bottom: 0;
   color: var(--muted);
+}
+
+.form-heading .form-deadline {
+  width: fit-content;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-left: 5px solid var(--gold);
+  border-radius: 8px;
+  background: #fff6e8;
+  color: var(--wine);
+  font-weight: 800;
 }
 
 .form-external {
