@@ -7,7 +7,7 @@
 網站目前使用 Google Forms iframe 內嵌表單：
 
 - 內嵌表單：`index.html` 的 `#form` 區塊
-- 表單區塊放在頁面底部，讓賓客先看完流程、菜單與停車資訊
+- 表單區塊放在頁面底部，讓賓客先看完流程、影片與停車資訊
 
 Google Forms iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改；表單本體的顏色、字體與封面需要在 Google Forms 後台手動調整。
 
@@ -55,6 +55,7 @@ Google Forms iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改；�
 - 喜宴日期、時間、地點：`index.html` 與 `script.js`
 - 停車資訊：`index.html` 與 `script.js`
 - 停車導引圖：`assets/parking-guide.svg`
+- 影片區塊：`assets/wedding-video.mp4`，`assets/wedding-video.mov`
 - 彩蛋影片：`assets/wedding-moment.mov`
 - 封面圖片：`assets/hero.svg`
 - 主色調：`styles.css` 最上方的 `:root`

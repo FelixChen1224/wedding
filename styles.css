@@ -579,66 +579,28 @@ h2 {
   font-weight: 700;
 }
 
-.menu-section {
+.video-section {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
-.menu-grid,
-.menu-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.menu-grid span,
-.menu-item {
-  min-height: 54px;
-  display: grid;
-  grid-template-columns: 46px 1fr;
-  align-items: start;
-  gap: 10px;
-  padding: 14px 16px;
+.video-shell {
+  width: min(430px, 100%);
+  margin: 0 auto;
+  padding: 14px;
+  border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
-  color: #403634;
-  line-height: 1.55;
-  box-shadow: 0 8px 28px rgba(92, 64, 44, 0.05);
+  box-shadow: 0 18px 48px rgba(92, 64, 44, 0.12);
 }
 
-.menu-grid span {
-  display: flex;
-  align-items: center;
-}
-
-.menu-item span {
-  color: var(--gold);
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
-.menu-item strong {
+.video-shell video {
   display: block;
-  font-size: 1.02rem;
-  line-height: 1.55;
-}
-
-.menu-item small {
-  grid-column: 2;
-  margin-top: -4px;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.menu-item.featured {
-  border-left: 5px solid var(--gold);
-  background: #fffdf9;
-}
-
-.menu-item.drink-note {
-  grid-column: span 2;
-  border-left: 5px solid var(--teal);
-  background: var(--teal-soft);
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 6px;
+  background: #111;
+  object-fit: contain;
 }
 
 .travel-section {
@@ -823,8 +785,6 @@ address {
   }
 
   .detail-grid,
-  .menu-grid,
-  .menu-list,
   .faith-layout,
   .faith-grid,
   .story-layout,
@@ -838,10 +798,6 @@ address {
 
   .faith-symbol {
     display: none;
-  }
-
-  .menu-item.drink-note {
-    grid-column: auto;
   }
 
   .rsvp-actions,
