@@ -9,8 +9,8 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="./assets/hero.svg">
     <title>周陳府喜宴 | 2026.06.27</title>
-    <link rel="stylesheet" href="./styles.css?v=20260524-faith">
-    <script src="./script.js?v=20260524-faith" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260524-easter">
+    <script src="./script.js?v=20260524-easter" defer></script>
   </head>
   <body>
     <header class="hero" id="top">
@@ -20,7 +20,6 @@
           <a href="#details">喜宴資訊</a>
           <a href="#story">新人故事</a>
           <a href="#blessing">祝福盟約</a>
-          <a href="#video">新人影片</a>
           <a href="#schedule">當日流程</a>
           <a href="#menu">宴席菜色</a>
           <a href="#parking">交通停車</a>
@@ -140,20 +139,6 @@
         </div>
       </section>
 
-      <section class="section video-section" id="video" aria-labelledby="video-title">
-        <div class="section-heading">
-          <p class="eyebrow">Video</p>
-          <h2 id="video-title">新人影片</h2>
-          <p>一段關於相遇、守護與照顧的片刻，邀請親友一起分享這份喜悅。</p>
-        </div>
-        <div class="video-shell">
-          <video controls playsinline preload="metadata">
-            <source src="./assets/wedding-moment.mov" type="video/quicktime">
-            您的瀏覽器不支援影片播放，請改用手機或新版瀏覽器觀看。
-          </video>
-        </div>
-      </section>
-
       <section class="section split" id="schedule" aria-labelledby="schedule-title">
         <div class="section-heading">
           <p class="eyebrow">Schedule</p>
@@ -232,28 +217,6 @@
         </figure>
       </section>
 
-      <section class="section service-section" aria-labelledby="service-title">
-        <div class="section-heading">
-          <p class="eyebrow">Service</p>
-          <h2 id="service-title">宴席服務</h2>
-          <p>餐廳提供現場佈置與酒水服務，實際內容依當日安排為準。</p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <strong>酒水飲品</strong>
-            <p>現打果汁與手沖冷泡茶；不供紅酒。</p>
-          </article>
-          <article class="service-card">
-            <strong>現場佈置</strong>
-            <p>POP架、相片架、紅毯花柱與各桌藝術桌花。</p>
-          </article>
-          <article class="service-card">
-            <strong>新人服務</strong>
-            <p>新娘桌菜邊服務，奉茶茶具與甜茶需提前告知。</p>
-          </article>
-        </div>
-      </section>
-
       <section class="section note-section" aria-label="提醒事項">
         <div class="note">
           <strong>溫馨提醒</strong>
@@ -297,6 +260,20 @@
 
     <footer class="site-footer">
       <p>周陳府喜宴 · 2026.06.27 · 一葉日本料理</p>
+      <button class="easter-egg-trigger" type="button" data-easter-egg aria-label="播放彩蛋影片">
+        <span aria-hidden="true"></span>
+      </button>
     </footer>
+    <div class="easter-egg-modal" data-easter-egg-modal hidden>
+      <div class="easter-egg-panel" role="dialog" aria-modal="true" aria-labelledby="easter-egg-title">
+        <button class="easter-egg-close" type="button" data-easter-egg-close aria-label="關閉彩蛋影片">×</button>
+        <p class="eyebrow">Bonus</p>
+        <h2 id="easter-egg-title">小彩蛋</h2>
+        <video controls playsinline preload="metadata">
+          <source src="./assets/wedding-moment.mov" type="video/quicktime">
+          您的瀏覽器不支援影片播放，請改用手機或新版瀏覽器觀看。
+        </video>
+      </div>
+    </div>
   </body>
 </html>

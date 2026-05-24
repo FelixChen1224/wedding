@@ -115,6 +115,34 @@ function setupCalendar() {
   button.addEventListener('click', downloadCalendarFile);
 }
 
+function setupEasterEgg() {
+  const trigger = document.querySelector('[data-easter-egg]');
+  const modal = document.querySelector('[data-easter-egg-modal]');
+  const closeButton = document.querySelector('[data-easter-egg-close]');
+  const video = modal?.querySelector('video');
+  if (!trigger || !modal || !closeButton) return;
+
+  const openModal = () => {
+    modal.hidden = false;
+    closeButton.focus();
+  };
+
+  const closeModal = () => {
+    modal.hidden = true;
+    if (video) video.pause();
+    trigger.focus();
+  };
+
+  trigger.addEventListener('click', openModal);
+  closeButton.addEventListener('click', closeModal);
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !modal.hidden) closeModal();
+  });
+}
+
 function setupMobileFormFrame() {
   const shell = document.querySelector('.form-shell');
   if (!shell) return;
@@ -157,6 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCountdown();
   setupAddressCopy();
   setupCalendar();
+  setupEasterEgg();
   setupMobileFormFrame();
   setupHashScrollCorrection();
 });
