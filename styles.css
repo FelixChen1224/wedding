@@ -48,8 +48,8 @@ a {
   padding: 24px clamp(20px, 4vw, 56px) 36px;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(26, 16, 13, 0.86), rgba(92, 13, 22, 0.48) 52%, rgba(26, 16, 13, 0.16)),
-    url("./assets/hero.svg?v=20260524-photo-theme") center / cover no-repeat;
+    linear-gradient(90deg, rgba(24, 10, 8, 0.86), rgba(93, 8, 16, 0.52) 45%, rgba(93, 8, 16, 0.12)),
+    url("./assets/couple-red.jpg?v=20260524-real-photos") center 38% / cover no-repeat;
   color: #fffdf9;
 }
 
@@ -64,11 +64,10 @@ a {
   border: 12px solid rgba(255, 248, 234, 0.82);
   border-radius: 8px;
   background:
-    linear-gradient(180deg, rgba(167, 15, 26, 0.18), rgba(32, 72, 60, 0.48)),
-    linear-gradient(160deg, rgba(255, 248, 234, 0.88) 0 14%, transparent 14% 100%),
-    linear-gradient(180deg, rgba(201, 22, 35, 0.72), rgba(111, 149, 109, 0.74));
+    linear-gradient(180deg, rgba(32, 72, 60, 0.02), rgba(32, 72, 60, 0.12)),
+    url("./assets/couple-garden.jpg?v=20260524-real-photos") center / cover no-repeat;
   box-shadow: 0 30px 80px rgba(24, 14, 10, 0.32);
-  opacity: 0.72;
+  opacity: 0.9;
   transform: rotate(2deg);
 }
 
@@ -647,6 +646,57 @@ h2 {
   border-bottom: 4px solid var(--gold);
 }
 
+.photo-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
+  grid-template-rows: repeat(2, clamp(260px, 27vw, 360px));
+  gap: 16px;
+  margin-bottom: clamp(26px, 5vw, 48px);
+}
+
+.photo-frame {
+  position: relative;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(200, 150, 51, 0.42);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(70, 38, 26, 0.14);
+}
+
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 10px rgba(255, 248, 239, 0.18);
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-red {
+  grid-column: 1 / 2;
+  grid-row: span 2;
+}
+
+.photo-red img {
+  object-position: center 38%;
+}
+
+.photo-garden img {
+  object-position: center 55%;
+}
+
+.photo-bubbles img {
+  object-position: center;
+}
+
 .video-shell {
   width: min(410px, 100%);
   margin: 0 auto;
@@ -846,8 +896,8 @@ address {
   .hero {
     min-height: min(86svh, 860px);
     background:
-      linear-gradient(180deg, rgba(26, 16, 13, 0.86), rgba(92, 13, 22, 0.52)),
-      url("./assets/hero.svg?v=20260524-photo-theme") center / cover no-repeat;
+      linear-gradient(180deg, rgba(24, 10, 8, 0.88), rgba(93, 8, 16, 0.58)),
+      url("./assets/couple-red.jpg?v=20260524-real-photos") center top / cover no-repeat;
   }
 
   .hero::after {
@@ -858,6 +908,7 @@ address {
   }
 
   .detail-grid,
+  .photo-gallery,
   .faith-layout,
   .faith-grid,
   .story-layout,
@@ -885,11 +936,29 @@ address {
   .form-shell iframe {
     height: var(--form-frame-height);
   }
+
+  .photo-gallery {
+    grid-template-rows: none;
+    grid-auto-rows: auto;
+  }
+
+  .photo-red,
+  .photo-frame {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .photo-garden {
+    aspect-ratio: 3 / 4;
+  }
 }
 
 @media (max-width: 520px) {
   .hero {
     padding-inline: 18px;
+    background-position: center top;
   }
 
   .hero::after {
@@ -934,6 +1003,19 @@ address {
 
   .story-card {
     padding: 22px;
+  }
+
+  .photo-gallery {
+    gap: 12px;
+  }
+
+  .photo-frame {
+    border-radius: 0;
+  }
+
+  .photo-red,
+  .photo-bubbles {
+    aspect-ratio: 16 / 10;
   }
 
   .form-section {
