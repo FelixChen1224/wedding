@@ -38,7 +38,8 @@ Google Forms iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改；�
 周弘明與陳淑玲，在上帝祝福與親友見證中，從一場剛好的相識走向一生相伴。
 敬請協助回覆是否出席，以便安排席次。
 
-時間：2026年6月27日（星期六）中午12:00
+禮拜：2026年6月27日（星期六）上午10:30 結婚感恩禮拜
+午宴：2026年6月27日（星期六）中午12:00
 地點：一葉日本料理
 地址：嘉義市西區西平里博愛路二段700號
 停車：第二停車場位於嘉義市西區友忠路52號
@@ -64,7 +65,7 @@ Google Forms iframe 內部樣式不能由 GitHub Pages 的 CSS 直接修改；�
 - 網站標題：`index.html`
 - 主婚人與新人故事：`index.html`
 - 基督教祝福與婚姻盟約文字：`index.html` 的 `#blessing` 區塊
-- 喜宴日期、時間、地點：`index.html` 與 `script.js`
+- 結婚感恩禮拜、喜宴日期、時間、地點：`index.html` 與 `script.js`
 - 停車資訊：`index.html` 與 `script.js`
 - 停車導引圖：`assets/parking-guide.svg`
 - 影片區塊：`assets/wedding-video.mp4`，`assets/wedding-video.mov`

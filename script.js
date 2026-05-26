@@ -1,7 +1,8 @@
 const SITE_CONFIG = {
   rsvpFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdLqFzW78R-9dRw6UyBX8Jk5SaAxfoMwoZPPd5JB3evD8O3zQ/viewform',
-  eventTitle: '周陳府喜宴',
-  eventStart: '2026-06-27T12:00:00+08:00',
+  eventTitle: '周陳府結婚感恩禮拜暨喜宴',
+  eventStart: '2026-06-27T10:30:00+08:00',
+  banquetStart: '2026-06-27T12:00:00+08:00',
   eventEnd: '2026-06-27T14:30:00+08:00',
   venueName: '一葉日本料理',
   address: '嘉義市西區西平里博愛路二段700號',
@@ -10,20 +11,72 @@ const SITE_CONFIG = {
   parkingMapUrl: 'https://www.google.com/maps/search/?api=1&query=%E5%98%89%E7%BE%A9%E5%B8%82%E8%A5%BF%E5%8D%80%E5%8F%8B%E5%BF%A0%E8%B7%AF52%E8%99%9F'
 };
 
-function formatCountdown(target) {
-  const diff = target.getTime() - Date.now();
-  if (diff <= 0) return '喜宴今日登場';
-
+function getCountdownParts(target) {
+  const diff = Math.max(0, target.getTime() - Date.now());
   const dayMs = 24 * 60 * 60 * 1000;
   const hourMs = 60 * 60 * 1000;
   const minuteMs = 60 * 1000;
   const secondMs = 1000;
-  const days = Math.floor(diff / dayMs);
-  const hours = Math.floor((diff % dayMs) / hourMs);
-  const minutes = Math.floor((diff % hourMs) / minuteMs);
-  const seconds = Math.floor((diff % minuteMs) / secondMs);
-  const time = [hours, minutes, seconds].map((value) => String(value).padStart(2, '0')).join(':');
-  return `${days}天 ${time}`;
+
+  return {
+    days: Math.floor(diff / dayMs),
+    hours: Math.floor((diff % dayMs) / hourMs),
+    minutes: Math.floor((diff % hourMs) / minuteMs),
+    seconds: Math.floor((diff % minuteMs) / secondMs),
+    isPast: target.getTime() <= Date.now()
+  };
+}
+
+function formatCountdown(target) {
+  const parts = getCountdownParts(target);
+  if (parts.isPast) return '結婚感恩禮拜今日登場';
+
+  const time = [parts.hours, parts.minutes, parts.seconds]
+    .map((value) => String(value).padStart(2, '0'))
+    .join(':');
+  return `${parts.days}天 ${time}`;
+}
+
+function setCountdownValue(element, value) {
+  if (!element) return;
+
+  const nextValue = String(value).padStart(2, '0');
+  if (element.textContent === nextValue) return;
+
+  element.textContent = nextValue;
+  element.classList.remove('is-updating');
+  void element.offsetWidth;
+  element.classList.add('is-updating');
+}
+
+function renderSegmentedCountdown(countdown, target) {
+  const parts = getCountdownParts(target);
+  const fields = {
+    days: countdown.querySelector('[data-countdown-days]'),
+    hours: countdown.querySelector('[data-countdown-hours]'),
+    minutes: countdown.querySelector('[data-countdown-minutes]'),
+    seconds: countdown.querySelector('[data-countdown-seconds]')
+  };
+
+  setCountdownValue(fields.days, parts.days);
+  setCountdownValue(fields.hours, parts.hours);
+  setCountdownValue(fields.minutes, parts.minutes);
+  setCountdownValue(fields.seconds, parts.seconds);
+
+  const readable = parts.isPast
+    ? '結婚感恩禮拜今日登場'
+    : `距離結婚感恩禮拜還有 ${parts.days} 天 ${parts.hours} 小時 ${parts.minutes} 分 ${parts.seconds} 秒`;
+  countdown.setAttribute('aria-label', readable);
+}
+
+function formatEventTime(dateText) {
+  const date = new Date(dateText);
+  return date.toLocaleTimeString('zh-TW', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+    timeZone: 'Asia/Taipei'
+  });
 }
 
 function toIcsDate(date) {
@@ -33,7 +86,7 @@ function toIcsDate(date) {
 function downloadCalendarFile() {
   const start = new Date(SITE_CONFIG.eventStart);
   const end = new Date(SITE_CONFIG.eventEnd);
-  const description = '周弘明與陳淑玲喜宴，敬邀在上帝祝福與親友見證中一同蒞臨。';
+  const description = `周弘明與陳淑玲結婚感恩禮拜暨喜宴。${formatEventTime(SITE_CONFIG.eventStart)} 結婚感恩禮拜，${formatEventTime(SITE_CONFIG.banquetStart)} 午宴開始，敬邀在上帝祝福與親友見證中一同蒞臨。`;
   const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
@@ -88,7 +141,11 @@ function setupCountdown() {
       return;
     }
 
-    countdown.textContent = formatCountdown(target);
+    if (countdown.querySelector('[data-countdown-days]')) {
+      renderSegmentedCountdown(countdown, target);
+    } else {
+      countdown.textContent = formatCountdown(target);
+    }
   };
 
   renderCountdown();
