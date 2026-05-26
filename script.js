@@ -1,6 +1,6 @@
 const SITE_CONFIG = {
   rsvpFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdLqFzW78R-9dRw6UyBX8Jk5SaAxfoMwoZPPd5JB3evD8O3zQ/viewform',
-  eventTitle: '周陳府結婚感恩禮拜暨喜宴',
+  eventTitle: '周陳府結婚感恩禮拜與喜宴',
   eventStart: '2026-06-27T10:30:00+08:00',
   banquetStart: '2026-06-27T12:00:00+08:00',
   eventEnd: '2026-06-27T14:30:00+08:00',
@@ -86,7 +86,7 @@ function toIcsDate(date) {
 function downloadCalendarFile() {
   const start = new Date(SITE_CONFIG.eventStart);
   const end = new Date(SITE_CONFIG.eventEnd);
-  const description = `周弘明與陳淑玲結婚感恩禮拜暨喜宴。${formatEventTime(SITE_CONFIG.eventStart)} 結婚感恩禮拜，${formatEventTime(SITE_CONFIG.banquetStart)} 午宴開始，敬邀在上帝祝福與親友見證中一同蒞臨。`;
+  const description = `周弘明與陳淑玲結婚感恩禮拜與喜宴。${formatEventTime(SITE_CONFIG.eventStart)} 結婚感恩禮拜，${formatEventTime(SITE_CONFIG.banquetStart)} 午宴開始，敬邀在上帝祝福與親友見證中一同蒞臨。`;
   const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
@@ -97,7 +97,7 @@ function downloadCalendarFile() {
     `DTSTART:${toIcsDate(start)}`,
     `DTEND:${toIcsDate(end)}`,
     `SUMMARY:${SITE_CONFIG.eventTitle}`,
-    `LOCATION:${SITE_CONFIG.venueName}，${SITE_CONFIG.address}`,
+    `LOCATION:午宴：${SITE_CONFIG.venueName}，${SITE_CONFIG.address}`,
     `DESCRIPTION:${description}`,
     'END:VEVENT',
     'END:VCALENDAR'
@@ -107,7 +107,7 @@ function downloadCalendarFile() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.download = '周陳府喜宴.ics';
+  link.download = '周陳府結婚感恩禮拜與喜宴.ics';
   document.body.appendChild(link);
   link.click();
   link.remove();

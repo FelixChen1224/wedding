@@ -1,13 +1,13 @@
 function createWeddingRsvpForm() {
   const config = {
-    formTitle: '喜宴出席回覆',
-    responseSheetTitle: '周陳府喜宴出席名單',
+    formTitle: '感恩禮拜與喜宴回覆',
+    responseSheetTitle: '周陳府結婚感恩禮拜與喜宴出席名單',
     hostLine: '男方主婚人：林莉莉\n女方主婚人：陳國安、陳愛仁',
     groomName: '周弘明',
     brideName: '陳淑玲',
     storyLine: '兩人在生活節奏裡相識；男方從事保險工作，女方投入長照領域，在上帝祝福與親友見證中，將守護與照顧走成一生相伴。',
     eventDate: '2026年6月27日（星期六）',
-    eventTime: '中午12:00',
+    eventTime: '上午10:30結婚感恩禮拜；中午12:00午宴',
     venueName: '一葉日本料理',
     venueAddress: '嘉義市西區西平里博愛路二段700號',
     parkingAddress: '第二停車場：嘉義市西區友忠路52號'
@@ -17,7 +17,7 @@ function createWeddingRsvpForm() {
   const responseSheet = SpreadsheetApp.create(config.responseSheetTitle);
 
   form.setDescription(
-    '誠摯邀請您參加周陳府喜宴，敬請協助填寫出席回覆，以便安排席次。\n\n' +
+    '誠摯邀請您參加周陳府結婚感恩禮拜與喜宴，敬請協助填寫出席回覆，以便安排席次。\n\n' +
       config.hostLine + '\n' +
       '新人：' + config.groomName + ' 與 ' + config.brideName + '\n' +
       '新人故事：' + config.storyLine + '\n' +
@@ -65,7 +65,7 @@ function createWeddingRsvpForm() {
 
   const attendanceItem = form.addMultipleChoiceItem();
   attendanceItem
-    .setTitle('是否出席喜宴？')
+    .setTitle('是否出席結婚感恩禮拜與喜宴？')
     .setHelpText(config.eventDate + ' ' + config.eventTime + '，地點：' + config.venueName)
     .setRequired(true);
 
